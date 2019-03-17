@@ -2,3 +2,10 @@ import numpy as np
 import pandas as pd
 from pandas_datareader import data
 import matplotlib.pyplot as plt
+
+
+JE = pd.read_csv('C:\\Users\\Blake\\Desktop\\HistoricalQuotes.JE.csv', index_col='date',)
+JE.head()
+
+JE['log_return'] = np.log(JE['Adj_Close'] / JE['Adj_Close'].shift(1))
+print (PG['log_return'])
